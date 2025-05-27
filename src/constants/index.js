@@ -198,9 +198,9 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "📁 Media Uploader",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A responsive web app built to seamlessly handle file uploads with real-time previews and cloud storage integration. Users can upload images, videos, or documents with drag-and-drop functionality. The system ensures optimized file handling, supports multiple formats, and features a clean UI for efficient user interaction",
     tags: [
       {
         name: "react",
@@ -214,25 +214,29 @@ const projects = [
         name: "tailwind",
         color: "pink-text-gradient",
       },
+      {
+        name:" Cloud Storage",
+        color: "blue-text-gradient",
+      }
     ],
     image: carrent,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
+    name: "🧠 AI Travel Advisor",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "An AI-powered travel recommendation app that provides personalized itineraries and destination suggestions. By leveraging generative AI, the system can interact with users conversationally and generate travel plans based on preferences like budget, location, and travel style.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "OpenAI API/Gemini API",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "Tailwind CSS",
         color: "pink-text-gradient",
       },
     ],
@@ -240,12 +244,12 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "Trip Guide",
+    name: "🏨 Hotel Management System",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A comprehensive web application designed to simplify hotel operations such as room booking, customer management, and billing. The system supports both admin and customer roles, ensuring streamlined processes and secure data handling.",
     tags: [
       {
-        name: "nextjs",
+        name: "MERN STACK",
         color: "blue-text-gradient",
       },
       {
@@ -253,7 +257,7 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "Tailwind CSS",
         color: "pink-text-gradient",
       },
     ],
