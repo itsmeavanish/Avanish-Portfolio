@@ -8,19 +8,19 @@ const Hero = () => {
   return (
     <section className={`relative w-full h-screen mx-auto z-0`}>
       {/* Neo Particles */}
-      <div className="flex inset-0 z-10 flex-end">
+      <div className="w-full flex inset-0 z-10 justify-start">
         <Neo color="#FF8000" />
       </div>
 
       <div
         className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 bg-transparent z-20`}
       >
-        <div className="flex flex-col justify-center items-center mt-16">
+        <div className="flex flex-col justify-center items-center mt-16 ml-28">
           <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
 
-        <div className="mt-16">
+        <div className="mt-16 ml-28">
           <h1 className={`${styles.heroHeadText} text-white`}>
             Hi, I'm <span className="text-[#915EFF]">Avanish</span>
           </h1>

@@ -22,13 +22,13 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
 import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import Google from "./company/Google.jpeg";
+import arcAI from "./company/arcAI.jpeg";
+import SIH from "./company/SIH.jpeg";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import carrent from "./InCLoud.png";
+import jobit from "./WorldWise.png";
+import tripguide from "./NeoBot.png";
 
 export {
   logo,
@@ -53,9 +53,9 @@ export {
   typescript,
   threejs,
   meta,
-  shopify,
-  starbucks,
-  tesla,
+  Google,
+  arcAI,
+  SIH,
   carrent,
   jobit,
   tripguide,
