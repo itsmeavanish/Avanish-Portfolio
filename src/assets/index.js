@@ -26,7 +26,7 @@ import Google from "./company/Google.jpeg";
 import arcAI from "./company/arcAI.jpeg";
 import SIH from "./company/SIH.jpeg";
 
-import carrent from "./InCLoud.png";
+import carrent from "./InCloud.png";
 import jobit from "./WorldWise.png";
 import tripguide from "./NeoBot.png";
 
