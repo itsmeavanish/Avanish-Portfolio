@@ -23,7 +23,7 @@ const ParticleSphere = ({ color }) => {
       
       // Get original position
       tempPosition.set(
-        originalPositions[i3+0],
+        originalPositions[i3+1],
         originalPositions[i3 + 1]
       );
       

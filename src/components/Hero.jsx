@@ -3,13 +3,15 @@ import { styles } from "../styles";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import Neo from "../Neo/Neo";
+import { useState } from "react";
 
 const Hero = () => {
+  const [color,setcolor]=useState("#FF8000")
   return (
     <section className={`relative w-full h-screen mx-auto z-0`}>
       {/* Neo Particles */}
       <div className="w-full flex inset-0 z-10 justify-start">
-        <Neo color="#FF8000" />
+        <Neo color={color} />
       </div>
 
       <div

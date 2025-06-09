@@ -6,10 +6,10 @@ import { OrbitControls } from '@react-three/drei';
 export default function Neo({color}) {
   return (
 
-    <Canvas camera={{ position: [0, 0, 6] }} style={{height: '100vh', display:"flex",zIndex:1000}}>
+    <Canvas camera={{ position: [0, 0, 6] }} style={{height:"100vh", width:"100vw"}}>
       <ambientLight intensity={0.5} />
       <ParticleSphere color={color} />
-      <OrbitControls enableZoom={false} />
+      <OrbitControls enableZoom={true} />
     </Canvas>
   );
 };
