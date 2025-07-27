@@ -1,7 +1,7 @@
 export const generateSpherePositions = () => {
   const particlesCount = 10000; // Increased for better visual effect
   const positions = new Float32Array(particlesCount * 3);
-  const radius = 1.9;
+  const radius = 1.5;
 
   for (let i = 0; i < particlesCount; i++) {
     // Using spherical coordinates for more uniform distribution

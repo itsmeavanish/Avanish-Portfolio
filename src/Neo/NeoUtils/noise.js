@@ -4,6 +4,5 @@ export const createNoisePattern = (time, position) => {
   const y = position.y * noiseScale + time ;
   const z = 0;
   
-  // Simplex-like noise approximation
   return (Math.sin(x)  + Math.sin(y) / 2);
 };

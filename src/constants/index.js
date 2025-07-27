@@ -120,7 +120,7 @@ const experiences = [
     company_name: "arcai.engineer",
     icon: arcAI,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "May 2025 - July 2025",
     points: [
       "Developing and maintaining web applications using MERN and other related technologies. Designed and developed backend and frontend architecture for the ArcAI Engineers website, ensuring robust functionality and seamless performance..",
       "Integrated captivating 3D particle animations, enhancing visual appeal and significantly improving user engagement",
@@ -133,7 +133,7 @@ const experiences = [
     company_name: "GDG MMMUT Website",
     icon: Google,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Dec 2024 - April 2024",
     points: [
       "Crafted a visually striking and highly functional frontend for the GDG website using modern web technologies.",
       " Delivered an extraordinary user interface that significantly enhanced user experience and engagement.",
@@ -146,7 +146,7 @@ const experiences = [
     company_name: "Hackathon",
     icon: SIH,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "Sep 2024 - October 2024",
     points: [
       " Led a 6-member team in Smart India Hackathon (SIH), achieving college-level qualification and securing a Top 10 ranking.",
       "Enhanced app performance, reducing algorithm response time by 35%..",
