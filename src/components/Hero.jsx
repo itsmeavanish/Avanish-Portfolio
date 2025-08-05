@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <section className={`relative w-full h-screen mx-auto z-0`}>
       {/* Neo Particles */}
-      <div className="w-full flex inset-0 z-10 justify-start ml-80">
+      <div className=" w-full flex inset-0 z-10 justify-start ml-96" >
         <Neo color={color} />
       </div>
 
@@ -22,7 +22,7 @@ const Hero = () => {
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
 
-        <div className="mt-20 ml-10 z-50">
+        <div className="mt-20 ml-7 z-50">
           <h1 className={`${styles.heroHeadText} text-white`}>
             Hi, I'm <span className="text-[#915EFF]">Avanish</span>
           </h1>
@@ -31,9 +31,17 @@ const Hero = () => {
             interfaces and web applications
           </p>
         </div>
-      
       </div>
-      <div className="flex justify-center lg:justify-start gap-4 absolute bottom-52 left-1/4 transform -translate-x-1/2 z-50">
+      <div className="flex justify-center lg:justify-start gap-4 absolute bottom-52 left-80 transform -translate-x-1/2 z-50">
+      <button
+    href="https://www.linkedin.com/in/avanish633/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 px-6 py-3 rounded-lg bg-[#0A66C2] text-white hover:opacity-90 transition-all duration-300 hover:scale-105 z-50"
+  >
+    <FaLinkedin className="w-5 h-5" />
+    LinkedIn
+  </button>
   <a
     href="https://github.com/itsmeavanish"
     target="_blank"
@@ -43,15 +51,7 @@ const Hero = () => {
     <FaGithub className="w-5 h-5" />
      GitHub
   </a>
-  <button
-    href="https://www.linkedin.com/in/avanish633/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center gap-2 px-6 py-3 rounded-lg bg-[#0A66C2] text-white hover:opacity-90 transition-all duration-300 hover:scale-105 z-50"
-  >
-    <FaLinkedin className="w-5 h-5" />
-    LinkedIn
-  </button>
+  
 </div>
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-20">
         <a href="#about">

@@ -6,7 +6,6 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
-
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
@@ -25,12 +24,17 @@ import meta from "./company/meta.png";
 import Google from "./company/Google.jpeg";
 import arcAI from "./company/arcAI.jpeg";
 import SIH from "./company/SIH.jpeg";
-
+import CampusSync from "./CampusSync.png";
+import Develevate from "./Develevate.png";
+import NeoParticle from "./Neo-3d-Particle.png";
 import carrent from "./InCloud.png";
 import jobit from "./WorldWise.png";
 import tripguide from "./NeoBot.png";
-
+import Avanish from "./Avanish-DP.jpg"
 export {
+  Develevate,
+  NeoParticle,
+  CampusSync,
   logo,
   backend,
   creator,
@@ -59,4 +63,5 @@ export {
   carrent,
   jobit,
   tripguide,
+  Avanish
 };

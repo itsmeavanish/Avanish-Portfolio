@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+import { UploadIcon } from "lucide-react";
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='xs:w-[250px] w-full'>
@@ -43,12 +44,26 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
-      <motion.p
+      <div className="flex justify-between">
+        <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
        I'm a passionate MERN Stack and app developer with expertise in JavaScript, React, Node.js, and libraries like React Three Fiber and GSAP. I build responsive, visually dynamic, and scalable web solutions, and have experience with Firebase, Supabase, and real-time APIs. As a quick learner, I love turning innovative ideas into impactful products. Let’s build something amazing together!
       </motion.p>
+      <motion.div
+        className="flex justify-center mt-8 h-fit w-fit">
+        <a
+        href="https://drive.google.com/file/d/1KXjAc_Y50maz5WpdnbEp0_reEmPyiT7k/view?usp=drive_link"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-2 px-6 py-3 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 hover:scale-105">
+          <UploadIcon className="w-4 h-4" />
+           Resume
+        </a>
+         
+      </motion.div>
+      </div>
 
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (

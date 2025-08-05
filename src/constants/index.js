@@ -23,9 +23,16 @@ import {
   jobit,
   tripguide,
   threejs,
+  Develevate,
+  CampusSync,
+  NeoParticle
 } from "../assets";
 
 export const navLinks = [
+  {
+    id:"home",
+    title:"Home"
+  },
   {
     id: "about",
     title: "About",
@@ -46,12 +53,13 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
-    icon: mobile,
+   title: "Backend Developer",
+    icon: backend,
   },
   {
-    title: "Backend Developer",
-    icon: backend,
+    
+     title: "React Native Developer",
+    icon: mobile,
   },
   {
     title: "Cloud Enthusiast",
@@ -187,7 +195,101 @@ const testimonials = [
 ];
 
 const projects = [
+ 
   {
+    name: "🧠 AI Travel Advisor-WorldWise",
+    description:
+      "An AI-powered travel recommendation app that provides personalized itineraries and destination suggestions. By leveraging generative AI, the system can interact with users conversationally and generate travel plans based on preferences like budget, location, and travel style.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "OpenAI API/Gemini API",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Tailwind CSS",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: jobit,
+    source_code_link: "https://github.com/itsmeavanish/WorldWise",
+  },
+  
+  {
+    name: "🚀 Developer Portfolio & Community - Develevate",
+    description:
+      "An all-in-one developer platform enabling users to showcase their portfolios, GitHub stats, LeetCode streaks, and coding achievements. Includes features like automated job applications, recruiter email outreach, and friend-based networking. Developers can upload project links, receive contribution suggestions, and interact within a dev-centric ecosystem tailored for career growth.",
+    tags: [
+      {
+        name: "MERN Stack",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Firebase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "REST API",
+        color: "pink-text-gradient",
+      }
+    ],
+    image: Develevate, // replace with actual image variable
+    source_code_link: "https://github.com/itsmeavanish/DevPortFolio",
+  },
+  {
+    name: "🏫 Campus Collaboration Hub - Campus Sync",
+    description:
+      "A centralized communication and collaboration platform for college clubs and students. Facilitates the creation of public/private rooms, resource sharing, Q&A threads, and real-time sessions like DSA meets. Clubs can manage announcements, share updates, and interact with members while students get personalized feeds and contribute to community discussions.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Node.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Socket.io",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "green-text-gradient",
+      }
+    ],
+    image: CampusSync, // replace with actual image variable
+    source_code_link: "https://github.com/itsmeavanish/CampusSync",
+  },
+  {
+  name: "✨ Neo 3D Particle Animation",
+  description:
+    "A visually immersive 3D particle background built with React Three Fibre and Drei, integrated into a Next.js environment. Designed to enhance modern web interfaces with smooth, interactive animations that respond to user movement and create an engaging visual layer. Perfect for futuristic dashboards and AI-based applications like chatbots or landing pages.",
+  tags: [
+    {
+      name: "React Three Fibre",
+      color: "blue-text-gradient",
+    },
+    {
+      name: "Three.js",
+      color: "green-text-gradient",
+    },
+    {
+      name: "Drei",
+      color: "pink-text-gradient",
+    },
+    {
+      name: "Next.js",
+      color: "blue-text-gradient",
+    },
+  ],
+  image: NeoParticle, // replace with actual image variable
+  source_code_link: "https://github.com/itsmeavanish/Neo-3D-Particles",
+},
+ {
     name: "📁 Media Uploader-InCloud",
     description:
       "A responsive web app built to seamlessly handle file uploads with real-time previews and cloud storage integration. Users can upload images, videos, or documents with drag-and-drop functionality. The system ensures optimized file handling, supports multiple formats, and features a clean UI for efficient user interaction",
@@ -213,27 +315,6 @@ const projects = [
     source_code_link: "https://github.com/itsmeavanish/InCloud",
   },
   {
-    name: "🧠 AI Travel Advisor-WorldWise",
-    description:
-      "An AI-powered travel recommendation app that provides personalized itineraries and destination suggestions. By leveraging generative AI, the system can interact with users conversationally and generate travel plans based on preferences like budget, location, and travel style.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "OpenAI API/Gemini API",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Tailwind CSS",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/itsmeavanish/WorldWise",
-  },
-  {
     name: "🏨 Gemini Chatbot-Neo",
     description:
       " Built a modern, responsive chat interface with Next.js (v14+),TypeScript, Shadcn UI, and Tailwind CSS, enabling real-time streaming responses with typing indicators and seamless user interaction. Enhanced visual appeal with interactive 3D particle effects powered by React 3 Fibre/Three.js for visually immersive interface.  Built efficient API routes to connect with the Google Gemini API, managing loading states, and robust error handling achieving reduced response time by almost 40%.",
@@ -254,6 +335,7 @@ const projects = [
     image: tripguide,
     source_code_link: "https://github.com/itsmeavanish/Gemini-AI-ChatBot",
   },
+
 ];
 
 export { services, technologies, experiences, testimonials, projects };
