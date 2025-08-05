@@ -33,7 +33,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex justify-center lg:justify-start gap-4 absolute bottom-52 left-80 transform -translate-x-1/2 z-50">
-      <button
+      <a
     href="https://www.linkedin.com/in/avanish633/"
     target="_blank"
     rel="noopener noreferrer"
@@ -41,7 +41,7 @@ const Hero = () => {
   >
     <FaLinkedin className="w-5 h-5" />
     LinkedIn
-  </button>
+  </a>
   <a
     href="https://github.com/itsmeavanish"
     target="_blank"
