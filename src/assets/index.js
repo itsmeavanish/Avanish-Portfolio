@@ -25,7 +25,7 @@ import Google from "./company/Google.jpeg";
 import arcAI from "./company/arcAI.jpeg";
 import SIH from "./company/SIH.jpeg";
 import CampusSync from "./CampusSync.png";
-import Develevate from "./Develevate.png";
+import Develevate from "./DevElevate.png";
 import NeoParticle from "./Neo-3d-Particle.png";
 import carrent from "./InCloud.png";
 import jobit from "./WorldWise.png";
