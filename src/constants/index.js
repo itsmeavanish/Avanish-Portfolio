@@ -236,7 +236,7 @@ const projects = [
         color: "pink-text-gradient",
       }
     ],
-    image: Develevate, // replace with actual image variable
+    image: Develevate, 
     source_code_link: "https://github.com/itsmeavanish/DevPortFolio",
   },
   {
@@ -261,7 +261,7 @@ const projects = [
         color: "green-text-gradient",
       }
     ],
-    image: CampusSync, // replace with actual image variable
+    image: CampusSync,
     source_code_link: "https://github.com/itsmeavanish/CampusSync",
   },
   {
@@ -286,7 +286,7 @@ const projects = [
       color: "blue-text-gradient",
     },
   ],
-  image: NeoParticle, // replace with actual image variable
+  image: NeoParticle, 
   source_code_link: "https://github.com/itsmeavanish/Neo-3D-Particles",
 },
  {
