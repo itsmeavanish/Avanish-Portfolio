@@ -3,10 +3,8 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
-import Neo from "../Neo/Neo";
 
 const Contact = () => {
   const formRef = useRef();
@@ -68,29 +66,30 @@ const Contact = () => {
 
   return (
     <div
-      className={` xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden h-fit w-screen`}
+      className={`mt-6 xl:mt-8 flex xl:flex-row flex-col gap-6 overflow-hidden w-full max-w-6xl mx-auto px-4`}
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
+        className='flex-[0.7] bg-gradient-to-br from-[#0b0b0f]/80 to-[#151528]/80 p-6 rounded-2xl backdrop-blur-md border border-white/10 shadow-lg shadow-black/30'
       >
         <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <h3 className={`${styles.sectionHeadText} text-[36px] leading-tight`}>Contact.</h3>
 
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
+          className='mt-6 flex flex-col gap-5'
         >
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your Name</span>
             <input
+              
               type='text'
               name='name'
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-tertiary/80 py-3 px-5 placeholder:text-secondary text-white rounded-lg outline-none border border-white/10 focus:border-primary/60 focus:ring-2 focus:ring-primary/30 transition-all font-medium'
             />
           </label>
           <label className='flex flex-col'>
@@ -101,24 +100,24 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="What's your web address?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-tertiary/80 py-3 px-5 placeholder:text-secondary text-white rounded-lg outline-none border border-white/10 focus:border-primary/60 focus:ring-2 focus:ring-primary/30 transition-all font-medium'
             />
           </label>
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your Message</span>
             <textarea
-              rows={7}
+              rows={5}
               name='message'
               value={form.message}
               onChange={handleChange}
               placeholder='What you want to say?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-tertiary/80 py-3 px-5 placeholder:text-secondary text-white rounded-lg outline-none border border-white/10 focus:border-primary/60 focus:ring-2 focus:ring-primary/30 transition-all font-medium'
             />
           </label>
 
           <button
             type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            className='bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary hover:shadow-lg hover:scale-[1.02] active:scale-[0.99] transition-transform'
           >
             {loading ? "Sending..." : "Send"}
           </button>
@@ -127,9 +126,28 @@ const Contact = () => {
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
+        className='flex-1 min-h-[260px] bg-gradient-to-br from-[#101018]/70 to-[#12122a]/70 rounded-2xl p-6 backdrop-blur-md border border-white/10 shadow-lg shadow-black/30'
       >
-
+        <div className='h-full flex flex-col justify-center'>
+          <h4 className='text-white text-[22px] font-semibold mb-2'>Let's Connect</h4>
+          <p className='text-secondary text-[14px] leading-relaxed mb-4'>
+            Prefer email? Reach me directly or find me on socials below.
+          </p>
+          <a href='avanishupadhyay633@gmail.com' className='text-[14px] text-white/90 underline underline-offset-4 mb-4 w-fit'>
+          avanishupadhyay633@gmail.com
+          </a>
+          <div className='flex items-center gap-4 mt-2'>
+            <a href='https://github.com/itsmeavanish' target='_blank' rel='noreferrer' className='opacity-90 hover:opacity-100 transition-opacity'>
+              <img src='/icons/github.svg' alt='github' className='w-6 h-6' />
+            </a>
+            <a href='https://www.linkedin.com/in/avanish633/' target='_blank' rel='noreferrer' className='opacity-90 hover:opacity-100 transition-opacity'>
+              <img src='/icons/linkedin.svg' alt='linkedin' className='w-6 h-6' />
+            </a>
+            <a href='https://www.instagram.com/theycallmeavanish/?hl=en' target='_blank' rel='noreferrer' className='opacity-90 hover:opacity-100 transition-opacity'>
+              <img src='/icons/instagram.svg' alt='instagram' className='w-6 h-6' />
+            </a>
+          </div>
+        </div>
       </motion.div>
     </div>
   );
