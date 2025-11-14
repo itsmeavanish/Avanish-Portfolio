@@ -16,6 +16,9 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
+
+  const isValidEmail = (value) => /.+@.+\..+/.test(value);
 
   const handleChange = (e) => {
     const { target } = e;
@@ -27,42 +30,40 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
+      alert("Please fill out all fields.");
+      return;
+    }
+    if (!isValidEmail(form.email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
     setLoading(true);
-
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "JavaScript Mastery",
-          from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
-          message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-
-          alert("Ahh, something went wrong. Please try again.");
-        }
-      );
+  
+    try {
+      const response = await fetch(`${API_BASE}/send-email`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+  
+      if (response.ok) {
+        alert("✅ Message sent successfully!");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        alert("❌ Failed to send message. Try again later.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("⚠️ Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
+  
+
 
   return (
     <div
@@ -133,8 +134,8 @@ const Contact = () => {
           <p className='text-secondary text-[14px] leading-relaxed mb-4'>
             Prefer email? Reach me directly or find me on socials below.
           </p>
-          <a href='avanishupadhyay633@gmail.com' className='text-[14px] text-white/90 underline underline-offset-4 mb-4 w-fit'>
-          avanishupadhyay633@gmail.com
+          <a href='mailto:avanishupadhyay633@gmail.com' className='text-[14px] text-white/90 underline underline-offset-4 mb-4 w-fit'>
+            avanishupadhyay633@gmail.com
           </a>
           <div className='flex items-center gap-4 mt-2'>
             <a href='https://github.com/itsmeavanish' target='_blank' rel='noreferrer' className='opacity-90 hover:opacity-100 transition-opacity'>
