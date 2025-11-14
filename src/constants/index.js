@@ -54,20 +54,20 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Full-Stack & App Developer",
     icon: web,
   },
   {
-   title: "Backend Developer",
+   title: "Neural Systems Designer",
     icon: backend,
   },
   {
     
-     title: "React Native Developer",
+     title: "Cloud & DevOps Enthusiast",
     icon: mobile,
   },
   {
-    title: "Cloud Enthusiast",
+    title: "Data-Inspired Technologist",
     icon: creator,
   },
 ];
@@ -128,6 +128,21 @@ const technologies = [
 ];
 
 const experiences = [
+  {
+  title: "Software Developer Intern",
+  company_name: "Winkget Express",
+  icon: "",   // your icon import
+  iconBg: "#1F2937",
+  date: "Jan 2025 - March 2025",
+  points: [
+    "Developed the company's product and service-based application and website, contributing to both frontend and backend functionalities.",
+    "Collaborated with a 10-member team, including 3 senior developers, ensuring smooth feature development and efficient task coordination.",
+    "Gained strong exposure to real-world engineering workflows, enhancing communication, teamwork, and leadership skills.",
+    "Actively participated in planning, code reviews, debugging, and deployment activities to ship high-quality releases.",
+    "Strengthened problem-solving skills by working closely with senior engineers and aligning development with business needs."
+  ],
+},
+
   {
     title: "MERN Stack Developer",
     company_name: "arcai.engineer",
@@ -200,7 +215,38 @@ const testimonials = [
 ];
 
 const projects = [
- 
+ {
+  name: "🌱 KrishiMitram – Digital Krishi Officer",
+  description:
+    "A unified agricultural ecosystem enabling farmers, buyers, store owners, and agri-officers to manage all farming activities from a single digital platform. It solves major farmer challenges like crop selection, disease detection, marketplace access, and scheme discovery through AI-driven intelligence.",
+  tags: [
+    { name: "Next.js", color: "blue-text-gradient" },
+    { name: "Node.js", color: "green-text-gradient" },
+    { name: "MongoDB", color: "pink-text-gradient" },
+    { name: "Supabase", color: "blue-text-gradient" },
+    { name: "AWS", color: "green-text-gradient" },
+    { name: "LLMs / RAG", color: "pink-text-gradient" },
+    { name: "CNN Models", color: "blue-text-gradient" }
+  ],
+  image: "", // add your image import
+  source_code_link: "https://github.com/itsmeavanish/KrishiMitram", // if private, add deployed link
+
+  highlights: [
+    "✔ Built as a one-stop digital solution to help farmers avoid struggling across multiple systems.",
+    "✔ 4 Interfaces: Farmer App, Buyer App, Store Owner App, Agri Officer Dashboard.",
+    "✔ Personalized farmer dashboards – weather, crop status, activities, alerts, AI suggestions.",
+    "✔ Marketplace – buy/sell crops, rent/borrow equipment, track orders, connect directly with buyers.",
+    "✔ Community Hub – farmers, buyers, and store owners share information, knowledge, and updates.",
+    "✔ Tutorials & learning material for modern agricultural practices.",
+    "✔ AI Advisory System: RAG chatbot (multi-language), crop recommendation engine, and CNN-based disease detection.",
+    "✔ Disease detection deployed on AWS (S3 + EC2) for high compute; excluded from live UI due to cost.",
+    "✔ Storage handled using AWS S3, Supabase buckets & HuggingFace spaces.",
+    "✔ Innovative Clap-Based Theme Switch – toggle light/dark mode using a single clap.",
+    "✔ Future-ready idea: Voice-based navigation (e.g., 'Go to Dashboard' → auto navigation).",
+    "✔ Built in collaboration with a 6-member team: Atishay Kumar Pandey, Akash Gupta, Aditya Pratap Singh, Saumya Srivastava, Vaishnavi Tripathi."
+  ]
+},
+
   {
     name: "🧠 AI Travel Advisor-WorldWise",
     description:

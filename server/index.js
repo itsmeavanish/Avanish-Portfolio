@@ -11,7 +11,26 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // ✅ Middlewares
-app.use(cors());
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://avanishportfolio.vercel.app"
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true); // allow mobile apps / server tests
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      } else {
+        return callback(new Error("Not allowed by CORS"));
+      }
+    },
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 // ✅ Health check route
@@ -49,7 +68,7 @@ app.post("/send-email", async (req, res) => {
   // Email configuration
   const mailOptions = {
     from: email, // sender (user who filled the form)
-    to: process.env.EMAIL_USER, // your Gmail (receiver)
+    to: process.env.MAIL_TO, // your Gmail (receiver)
     subject: `New Portfolio Contact from ${name}`,
     text: `
 Name: ${name}
@@ -73,7 +92,7 @@ ${message}
 
   try {
     await transporter.sendMail(mailOptions);
-    console.log(`✅ Email sent successfully from ${email}`);
+    console.log(`✅ Email sent successfully to ${process.env.MAIL_TO}`);
     res.status(200).json({ message: "Message sent successfully!" });
   } catch (error) {
     console.error("❌ Error sending email:", error);
