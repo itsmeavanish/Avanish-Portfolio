@@ -9,10 +9,11 @@ const Hero = () => {
   const [color,setcolor]=useState("#FF8000")
   return (
     <section className={`relative w-full h-screen mx-auto z-0`}>
-      {/* Neo Particles */}
-      <div className=" w-full flex inset-0 z-10 justify-start ml-96" >
-        <Neo color={color} />
-      </div>
+      {/* Neo animation hidden on mobile */}
+<div className="hidden md:flex w-full inset-0 z-10 justify-start ml-96">
+  <Neo color={color} />
+</div>
+
 
       <div
         className={`absolute inset-0 top-[160px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 bg-transparent z-20 -ml-16 `}

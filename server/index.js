@@ -11,26 +11,30 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // ✅ Middlewares
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://avanishportfolio.vercel.app"
-];
 
 app.use(
   cors({
     origin: function (origin, callback) {
-      if (!origin) return callback(null, true); // allow mobile apps / server tests
+      if (!origin) return callback(null, true);
+
+      const allowedOrigins = [
+        "http://localhost:5173",
+        "https://avanishportfolio.vercel.app",
+        "https://avanish-portfolio-ten.vercel.app"
+      ];
+
       if (allowedOrigins.includes(origin)) {
         return callback(null, true);
       } else {
+        console.log("❌ Blocked by CORS:", origin);
         return callback(new Error("Not allowed by CORS"));
       }
     },
     methods: ["GET", "POST"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true,
+    allowedHeaders: ["Content-Type"],
   })
 );
+
 app.use(express.json());
 
 // ✅ Health check route
