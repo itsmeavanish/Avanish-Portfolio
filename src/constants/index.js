@@ -25,7 +25,8 @@ import {
   threejs,
   Develevate,
   CampusSync,
-  NeoParticle
+  NeoParticle,
+  krishimitram
 } from "../assets";
 
 export const navLinks = [
@@ -228,7 +229,7 @@ const projects = [
     { name: "LLMs / RAG", color: "pink-text-gradient" },
     { name: "CNN Models", color: "blue-text-gradient" }
   ],
-  image: "", // add your image import
+  image: krishimitram, // add your image import
   source_code_link: "https://github.com/itsmeavanish/KrishiMitram", // if private, add deployed link
 
   highlights: [

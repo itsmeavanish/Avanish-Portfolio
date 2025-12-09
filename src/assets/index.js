@@ -31,6 +31,7 @@ import carrent from "./InCloud.png";
 import jobit from "./WorldWise.png";
 import tripguide from "./NeoBot.png";
 import Avanish from "./Avanish-DP.jpg"
+import krishimitram from "./krishimitram.png";
 export {
   Develevate,
   NeoParticle,
@@ -63,5 +64,6 @@ export {
   carrent,
   jobit,
   tripguide,
-  Avanish
+  Avanish,
+  krishimitram
 };
